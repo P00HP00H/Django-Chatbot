@@ -12,8 +12,8 @@ RUN pip install redis
 RUN django-admin startproject pooh_chatbot .
 RUN python manage.py startapp pooh_app
 
-ADD ./dockerfile/script/* /
-ADD ./dockerfile/python/* /pooh_app/
-ADD ./dockerfile/setting/* /pooh_chatbot/
+ADD ./script/* /
+ADD ./python/* /pooh_app/
+ADD ./setting/* /pooh_chatbot/
 
 WORKDIR /
