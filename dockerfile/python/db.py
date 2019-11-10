@@ -4,7 +4,6 @@ import sys
 sys.path.append('/pooh_app')
 from parsing import parse
 
-
 # Redis DB 생성 및 연결
 r = redis.Redis(host="redis", port=6379, db=0)
 
