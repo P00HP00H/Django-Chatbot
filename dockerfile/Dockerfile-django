@@ -1,0 +1,19 @@
+FROM django:latest
+MAINTAINER POOH <k5602o@nate.com>
+
+RUN \
+    apt-get update && \
+    apt-get install cron -y
+
+RUN pip install --upgrade pip
+RUN pip install requests
+RUN pip install bs4
+RUN pip install redis
+RUN django-admin startproject pooh_chatbot .
+RUN python manage.py startapp pooh_app
+
+ADD ./dockerfile/script/* /
+ADD ./dockerfile/python/* /pooh_app/
+ADD ./dockerfile/setting/* /pooh_chatbot/
+
+WORKDIR /

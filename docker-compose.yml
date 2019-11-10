@@ -1,0 +1,23 @@
+version: '2'
+services:
+  redis:
+    image: redis:latest
+    links:
+      - python
+    volumes:
+      - pooh_cafe:/data
+    restart: always
+
+  python:
+    build:
+      context: ./dockerfile
+      dockerfile: Dockerfile-django
+    command: bash -c "sleep 2; /start-dev.sh"
+    environment:
+      - "TZ=Asia/Seoul"
+    ports:
+     - "8881:8000"
+    restart: always
+
+volumes:
+  pooh_cafe:
