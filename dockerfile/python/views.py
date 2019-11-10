@@ -10,7 +10,6 @@ sys.path.append('/pooh_app')
 from parsing import parse
 from db import today_menu, tomorrow_menu
 
-
 # Create your views here.
 
 # 키보드 버튼
