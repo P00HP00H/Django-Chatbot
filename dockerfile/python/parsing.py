@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import requests, json
 
-
 ## HTTP GET Request
 # 학식 메뉴 크롤링
 def parse(a):
