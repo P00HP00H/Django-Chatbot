@@ -9,6 +9,7 @@ r = redis.Redis(host="redis", port=6379, db=0)
 
 # 크롤링한 학식 메뉴들을 Redis에 저장
 def menu_insert():
+    print('학식 메뉴를 redis에 저장하였습니다.)
     for i in range(0, 84):
         r.set(i, parse(i))
 
