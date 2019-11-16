@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 ]
 
 CRONJOBS = [
-    ('0 0 * * *','pooh_app.db.menu_insert'),
+    ('0 0 * * *','pooh_app.db.menu_insert', '>> /log.txt'),
 ]
 
 MIDDLEWARE = [
