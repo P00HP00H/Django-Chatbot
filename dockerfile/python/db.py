@@ -8,8 +8,9 @@ from parsing import parse
 r = redis.Redis(host="redis", port=6379, db=0)
 
 # 크롤링한 학식 메뉴들을 Redis에 저장
-for i in range(0, 84):
-    r.set(i, parse(i))
+def menu_insert():
+    for i in range(0, 84):
+        r.set(i, parse(i))
 
 # 오늘 메뉴를 DB에서 불러오는 함수
 def today_menu(a):
