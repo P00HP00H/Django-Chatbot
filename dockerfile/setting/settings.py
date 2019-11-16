@@ -39,7 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_crontab',
     'pooh_app',
+]
+
+CRONJOBS = [
+    ('0 0 * * *','pooh_app.db.db_insert'),
 ]
 
 MIDDLEWARE = [
