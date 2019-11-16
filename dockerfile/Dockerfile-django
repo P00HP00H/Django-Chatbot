@@ -2,18 +2,20 @@ FROM django:latest
 MAINTAINER POOH <k5602o@nate.com>
 
 RUN \
-    apt-get update && \
-    apt-get install cron -y
+    apt-get update -y
 
 RUN pip install --upgrade pip
 RUN pip install requests
 RUN pip install bs4
 RUN pip install redis
+RUN pip install django-crontab
 RUN django-admin startproject pooh_chatbot .
 RUN python manage.py startapp pooh_app
 
 ADD ./script/* /
 ADD ./python/* /pooh_app/
 ADD ./setting/* /pooh_chatbot/
+
+RUN python manage.py crontab add
 
 WORKDIR /
