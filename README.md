@@ -14,4 +14,4 @@
 버튼을 보면 내일 메뉴들로 바뀐 것을 확인하실 수 있습니다. 맨 아래쪽에 "뒤로" 버튼을 누르면 오늘 메뉴로 돌아갑니다. 아까 전에 눌렀던 A동 학식과 비교하기 위해 "내일 A동 학식"을 눌러보면<br><br><br>
 <img src="https://github.com/P00HP00H/P00HP00H.github.io/blob/master/img/hello1/28.jpg?raw=true" width="300px">
 
-아까 A동 학식과 다르게 날짜가 바뀌어 있고 메뉴 역시 바뀌어져 있는 것을 확인하실 수 있습니다.
+아까 A동 학식과 다르게 날짜가 바뀌어 있고 메뉴 역시 바뀌어져 있는 것을 확인하실 수 있습니다.<br><br><br>P.S : 그냥 install.sh를 실행하면 Django의 Crontab으로 매 주마다 메뉴들을 업데이트하고, hongik_cafeteria 폴더로 가서 docker-compose up -d --build를 해주게 되면 리눅스의 Crontab 기능으로 매 주마다 업데이트를 하게끔 했는데, 사실 Django의 Crontab 기능 역시 리눅스의 Crontab 기능을 이용하는 것이므로 결국 둘 다 리눅스의 Crontab 기능을 이용하는 것입니다.
